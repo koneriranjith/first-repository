@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<script src="angularjs.js"></script>
+<script src="angular-route.min.js"></script>
+<!-- <script src="js/angular.min.js"></script> -->
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="angular-xeditable/css/xeditable.css" rel="stylesheet">
+    <script src="angular-xeditable/js/xeditable.js"></script>
+    
+	
+	<title></title>
+</head>
+<body>
+<div ng-class="container" >
+<header>
+
+<table class="table table-striped"  aria-labelledby="dropdownMenu">
+<th data-field="name"><a tabindex="-1" class="btn btn-default" href="#/AddNewOrder"> Add New Order </a></th>
+<th data-field="column4" data-visible="false"><a tabindex="-1" class="btn btn-default" href="#/login">login</a></th>
+</table>
+	
+        
+</header>
+
+<div ng-view>
+	
+</div>
+        
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

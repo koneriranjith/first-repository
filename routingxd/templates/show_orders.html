@@ -1,0 +1,29 @@
+
+<label>Name:</label><a href="#" tabindex="-1" class="btn btn-default" editable-text="user.name" e-style="color: green" e-required e-placeholder="Enter name">{{ user.name }}</a><br/>
+
+<label>DOB:</label><span tabindex="-1" class="btn btn-default" editable-date="user.date" e-style="color: green" e-required e-placeholder="select date of birth">{{ user.date||"empty" }}</span><br/>
+<div>
+<label>Email:</label><span tabindex="-1" class="btn btn-default" editable-email="user.email" e-style="color: green" e-required e-placeholder="Enter correct email id">{{ user.email||"empty" }}</span><br/>
+
+<label>Number:</label><span tabindex="-1" class="btn btn-default" editable-tel="user.number" e-min="10" e-title="check your number">{{ user.number||"empty" }}</span>
+<div ng-controller="RadiolistCtrl">
+  <label>Gender:</label><a tabindex="-1" class="btn btn-default" href="#" editable-radiolist="user.status" e-ng-options="s.value as s.text for s in statuses">
+    {{ showStatus() }}
+  </a>
+</div>
+<div ng-controller="TextareaCtrl">
+  <label>Address:</label><a tabindex="-1" class="btn btn-default" href="#" editable-textarea="user.desc" e-rows="7" e-cols="40">
+    <pre>{{ user.desc || 'Enter your address' }}</pre>
+  </a>
+</div>
+
+<div ng-controller="RangeCtrlssc">
+<label>ssc %</label><a tabindex="-1" class="btn btn-default" href="#" editable-range="user.range" e-step="1">{{ user.range || 'empty' }}</a>
+</div>
+<div ng-controller="RangeCtrlInter">
+<label>Intermediate %</label><a tabindex="-1" class="btn btn-default" href="#" editable-range="user.range" e-step="1">{{ user.range || 'empty' }}</a>
+</div>
+<div ng-controller="RangeCtrlBtech">
+<label>Btech %</label><a tabindex="-1" class="btn btn-default" href="#" editable-range="user.range" e-step="1">{{ user.range || 'empty' }}</a>
+</div>
+</div>
